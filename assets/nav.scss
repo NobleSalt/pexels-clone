@@ -1,0 +1,119 @@
+.Hero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -4rem;
+  overflow: hidden;
+  height: 100%;
+  display: none;
+  max-height: 500px;
+  min-height: 380px;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.025);
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  &_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    zoom: 150%;
+  }
+
+  &_section {
+    max-width: 650px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+
+    .center {
+      display: block;
+      width: 100%;
+      padding-right: 0.5rem;
+
+      ul {
+        display: flex;
+        color: white;
+        white-space: pre;
+        padding-top: 5px;
+
+        li {
+          a {
+            opacity: 0.8;
+          }
+        }
+
+        &:not(:first-child) {
+          // opacity: 0.8;
+          color: white;
+          // white-space: normal;
+          font-weight: 100;
+        }
+      }
+    }
+
+    form {
+      display: block;
+      // width: 95%;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-radius: 5px;
+      padding: 0.2rem 0.8rem;
+      height: 3rem;
+
+      input {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        width: 80%;
+        font-size: 1rem;
+        height: 100%;
+        font-weight: 300;
+        // background-color: red;
+        outline: none;
+        border: none;
+        padding: 1.25rem;
+        // color: $color-search-bar-placeholder;
+        // color: white;
+
+        &:focus {
+          background-color: $color-search-bar-background-focus;
+        }
+        // ::placeholder {
+        //   background-color: $color-search-bar-background !important;
+        // }
+      }
+    }
+
+    &_intro {
+      width: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen,
+        cantarell, helvetica neue, ubuntu, sans-serif;
+      display: block;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: white;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+}
